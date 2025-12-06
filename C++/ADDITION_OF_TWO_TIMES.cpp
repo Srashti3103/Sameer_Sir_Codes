@@ -3,18 +3,18 @@
 using namespace std;
 class time
 {
-	private: int h,m;
+	private: int hr,min;
 	public:void get(){
-		cout<<"ENTER h AND m"<<endl;
-		cin>>h>>m;
+		cout<<"ENTER hour AND minute"<<endl;
+		cin>>hr>>min;
 	}
 	void out(){
-		cout<<h<<":"<<m<<endl;
+		cout<<hr<<":"<<min<<endl;
 	}
 	void sum(time x,time y)
 	{
-		m=(x.m+y.m)%60;
-		h=x.h+y.h+(x.m+y.m);
+		min=(x.min+y.min)%60;
+		hr=x.hr+y.hr+(x.min+y.min)/60;
 	}
 };
 int main(){
@@ -24,4 +24,5 @@ int main(){
 	t.sum(p,q);
 	p.out();
 	q.out();
+	t.out();
 }
