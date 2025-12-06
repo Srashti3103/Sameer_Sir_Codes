@@ -11,15 +11,15 @@ class complex{
 		cout<<a<<"+i"<<b<<endl;
 	}
 	void sum(complex x,complex y){
-		a=x.a+y.a;
-		b=x.b+y.b;
+		a=x.a+y.a;//real part
+		b=x.b+y.b;//imaginary part
 	}	
 };
 int main(){
 	complex p,q,t;
 	p.get();
 	q.get();
-	t.sum(p,q);
+	t.sum(p,q);//object as function argument 
 	p.out();
 	q.out();
 	t.out();
